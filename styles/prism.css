@@ -1,0 +1,251 @@
+pre[class*='language-'] {
+  @apply relative pt-8 bg-code-black text-code-white;
+  &::selection {
+    @apply bg-code-selection;
+  }
+}
+
+.lang {
+  @apply absolute top-0 left-0 bg-code-white text-code-black px-2 rounded-br;
+}
+
+/* Common */
+.token {
+  &.comment {
+    @apply text-code-gray italic;
+  }
+  &.string {
+    @apply text-code-green;
+  }
+}
+
+/* HTML */
+.language-html {
+  & .token {
+    &.doctype-tag {
+      @apply text-code-red;
+    }
+    &.name {
+      @apply text-code-orange;
+    }
+    &.punctuation {
+      @apply text-code-white;
+    }
+    &.tag {
+      & .token.tag {
+        @apply text-code-red;
+      }
+      & .token.attr-name {
+        @apply text-code-orange;
+      }
+      & .token.attr-value {
+        @apply text-code-green;
+        & .token.punctuation {
+          @apply text-code-green;
+          &.attr-equals {
+            @apply text-code-white;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* CSS */
+
+.language-css {
+  @apply text-code-orange;
+  & .token {
+    &.operator,
+    &.punctuation,
+    &.property,
+    &.operator,
+    &.combinator {
+      @apply text-code-white;
+    }
+    &.attr-name,
+    &.color,
+    &.number,
+    &.class {
+      @apply text-code-orange;
+    }
+
+    &.attr-value {
+      @apply text-code-green;
+    }
+    &.selector,
+    &.unit {
+      @apply text-code-red;
+    }
+    &.property.prefix,
+    &.pseudo-element,
+    &.pseudo-class {
+      @apply text-code-cyan;
+    }
+    &.atrule {
+      @apply text-code-white;
+      & .token.rule {
+        @apply text-code-purple;
+      }
+    }
+  }
+}
+
+/* Javascript */
+.language-js {
+  @apply text-code-yellow;
+  & .token {
+    &.punctuation {
+      @apply text-code-white;
+    }
+    &.keyword.this,
+    &.dom.variable,
+    &.class-name {
+      @apply text-code-yellow;
+    }
+    &.null,
+    &.boolean,
+    &.number {
+      @apply text-code-orange;
+    }
+    &.property-access,
+    &.imports,
+    &.parameter {
+      @apply text-code-red;
+    }
+    &.parameter {
+      @apply italic;
+    }
+    &.keyword,
+    &.regex-flags,
+    &.interpolation-punctuation {
+      @apply text-code-purple;
+    }
+    &.function,
+    &.property-access.function.method {
+      @apply text-code-blue;
+    }
+    &.regex-source,
+    &.operator {
+      @apply text-code-cyan;
+    }
+    &.regex-delimiter {
+      @apply text-code-green;
+    }
+  }
+}
+
+/* JSON */
+.language-json {
+  & .token {
+    &.punctuation,
+    &.operator {
+      @apply text-code-white;
+    }
+    &.boolean,
+    &.number,
+    &.null.keyword {
+      @apply text-code-orange;
+    }
+    &.property {
+      @apply text-code-red;
+    }
+  }
+}
+
+/* Shell */
+.language-bash,
+.language-shell {
+  & .token {
+    &.shebang.important {
+      @apply text-code-gray italic;
+    }
+    &.builtin.class-name,
+    &.entity {
+      @apply text-code-cyan;
+    }
+    &.keyword {
+      @apply text-code-purple;
+    }
+    &.variable {
+      @apply text-code-red;
+    }
+  }
+}
+
+/* Python */
+.language-python,
+.language-py {
+  & .token {
+    &.keyword {
+      @apply text-code-purple italic;
+    }
+    &.operator,
+    &.function {
+      @apply text-code-cyan;
+    }
+    &.number {
+      @apply text-code-orange;
+    }
+  }
+}
+
+/* Go */
+.language-go {
+  @apply text-code-red;
+  & .token {
+    &.function {
+      @apply text-code-blue;
+    }
+    &.keyword,
+    &.operator,
+    &.builtin {
+      @apply text-code-purple;
+    }
+    &.number {
+      @apply text-code-orange;
+    }
+    &.punctuation {
+      @apply text-code-white;
+    }
+  }
+}
+
+/* Rust */
+.language-rust {
+  @apply text-code-red;
+  & .token {
+    &.char {
+      @apply text-code-green;
+    }
+    &.lifetime-annotation,
+    &.namespace,
+    &.type-definition,
+    &.class-name {
+      @apply text-code-yellow;
+    }
+    &.function-definition,
+    &.function,
+    &.macro {
+      @apply text-code-blue;
+    }
+    &.punctuation,
+    &.fragment-specifier,
+    &.module-declaration,
+    &.attribute {
+      @apply text-code-white;
+    }
+    &.number,
+    &.boolean,
+    &.constant {
+      @apply text-code-orange;
+    }
+    &.keyword {
+      @apply text-code-purple;
+    }
+    &.operator,
+    &.closure-punctuation {
+      @apply text-code-cyan;
+    }
+  }
+}

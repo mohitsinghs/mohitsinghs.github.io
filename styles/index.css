@@ -1,0 +1,7 @@
+@import 'tailwindcss/tailwind.css';
+@import './iosevka.css';
+@import './prism.css';
+@import './base.css';
+@import './home.css';
+@import './archive.css';
+@import './post.css';

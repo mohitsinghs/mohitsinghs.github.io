@@ -1,0 +1,29 @@
+.archive {
+  & ul {
+    @apply my-8 flex flex-col gap-4 mx-8 md:max-w-prose md:mx-auto;
+    & > li {
+      @apply flex flex-col cursor-pointer w-full p-4;
+      & > h2 {
+        @apply mb-2 text-xl md:text-2xl font-extrabold text-gray-700;
+      }
+      & > p:first-of-type {
+        @apply mb-2 text-sm md:text-xs font-medium text-gray-600;
+      }
+      & > p + p {
+        @apply leading-loose text-gray-700;
+      }
+      & a {
+        @apply justify-self-end px-4 py-2 mt-4 text-sm font-medium text-gray-600 rounded-lg cursor-pointer select-none bg-gray-50 max-w-max;
+        &:hover {
+          @apply bg-gray-100 text-gray-700;
+          & svg {
+            @apply translate-x-1;
+          }
+        }
+        & svg {
+          @apply inline w-auto h-4 ml-2 transition-transform duration-300 ease-in-out;
+        }
+      }
+    }
+  }
+}

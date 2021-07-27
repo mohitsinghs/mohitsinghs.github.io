@@ -1,0 +1,24 @@
+#__next {
+  @apply relative flex flex-col min-h-screen antialiased selection:bg-gray-700 selection:text-white;
+  & > header {
+    @apply flex flex-col items-center justify-center w-full py-16;
+    & h1 {
+      @apply py-2 text-4xl font-bold text-gray-700;
+    }
+    & p {
+      @apply py-2 text-gray-600 whitespace-pre;
+    }
+  }
+  & > footer {
+    @apply w-full py-4 text-center;
+    & p {
+      @apply text-xs text-gray-700;
+    }
+  }
+  & > main {
+    @apply flex-grow flex-shrink-0;
+    &:not(.home) {
+      @apply flex flex-col;
+    }
+  }
+}

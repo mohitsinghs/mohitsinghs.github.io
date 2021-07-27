@@ -1,0 +1,50 @@
+{
+  "name": "mohitsinghs.github.io",
+  "version": "1.0.0",
+  "description": "Personal website and portfolio",
+  "license": "UNLICENSED",
+  "author": "Mohit Singh <mohit@mohitsingh.in> (https://mohitsingh.in/)",
+  "repository": "mohitsinghs/mohitsings.github.io",
+  "homepage": "https://mohitsingh.in",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "postbuild": "next export",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@fontsource/poppins": "^4.5.0",
+    "clsx": "^1.1.1",
+    "littlefoot": "^3.4.1",
+    "next": "11.0.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-feather": "^2.0.9",
+    "typed.js": "^2.0.12"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.3.1",
+    "gray-matter": "^4.0.3",
+    "postcss": "^8.3.6",
+    "postcss-import": "^14.0.2",
+    "prismjs": "^1.24.1",
+    "remark": "^13.0.0",
+    "remark-external-links": "^8.0.0",
+    "remark-footnotes": "^3.0.0",
+    "remark-gfm": "^1.0.0",
+    "remark-html": "^13.0.1",
+    "tailwindcss": "mohitsinghs/tailwindcss#x"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
