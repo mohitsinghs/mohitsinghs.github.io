@@ -1,12 +1,35 @@
+.highlight {
+  @apply relative;
+}
+
 pre[class*='language-'] {
-  @apply relative pt-8 bg-code-black text-code-white;
+  @apply pt-6 bg-code-black text-code-white;
+  &::before {
+    @apply absolute top-0 left-0 px-2 rounded-br rounded-tl text-sm;
+  }
   &::selection {
     @apply bg-code-selection;
   }
 }
 
-.lang {
-  @apply absolute top-0 left-0 bg-code-white text-code-black px-2 rounded-br;
+pre[class*='language-js']::before {
+  content: 'JS';
+  @apply bg-code-yellow text-code-black;
+}
+
+pre[class*='language-py']::before {
+  content: 'Python';
+  @apply bg-code-blue text-code-black;
+}
+
+pre[class*='language-go']::before {
+  content: 'Go';
+  @apply bg-code-cyan text-code-black;
+}
+
+pre[class*='language-bash']::before {
+  content: 'Bash';
+  @apply bg-code-orange text-code-black;
 }
 
 /* Common */

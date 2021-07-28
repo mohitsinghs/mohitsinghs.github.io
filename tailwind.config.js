@@ -35,6 +35,9 @@ module.exports = {
             '& h2': {
               color: theme('colors.gray.700'),
             },
+            '& a': {
+              color: theme('colors.gray.600'),
+            },
             '& code': {
               color: theme('colors.code.white'),
               backgroundColor: theme('colors.code.black'),
