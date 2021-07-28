@@ -10,7 +10,6 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ['Poppins', ...defaultTheme.fontFamily.sans],
-        mono: ['Iosevka Web', ...defaultTheme.fontFamily.mono],
       },
       colors: {
         gray: colors.coolGray,
