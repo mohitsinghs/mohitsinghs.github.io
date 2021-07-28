@@ -35,6 +35,21 @@ module.exports = {
             '& h2': {
               color: theme('colors.gray.700'),
             },
+            '& code': {
+              color: theme('colors.code.white'),
+              backgroundColor: theme('colors.code.black'),
+              padding: '0.125rem 0.5rem',
+              margin: '0 0.25rem',
+              borderRadius: '0.25rem',
+              fontWeight: '400',
+              display: 'inline-block',
+            },
+            '& code::before': {
+              content: '""',
+            },
+            '& code::after': {
+              content: '""',
+            },
           },
         },
       }),

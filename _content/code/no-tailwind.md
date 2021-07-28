@@ -18,7 +18,7 @@ let { name: animationName } = parseAnimationValue(value)
 // So this means parseAnimationValue is always an object
 ```
 
-Raw animations were being parsed, and their value was being extracted in an `Object` for processing. So, `parseAnimationValue` should return an `Object` containing `name`, but the declaration of this function said otherwise.
+Raw animations were being parsed, and their value was being extracted in an `js-->Object` for processing. So, `js-->parseAnimationValue` should return an `js-->Object` containing `js-->name`, but the declaration of this function said otherwise.
 
 ```js
 export default function parseAnimationValue(input) {
@@ -27,7 +27,7 @@ export default function parseAnimationValue(input) {
 }
 ```
 
-According to the declaration, for combined animation, it returns an `Array` of animation `Object`. So, I tried fixing it, which took a few minutes, and created a pull request with tests.
+According to the declaration, for combined animation, it returns an `js-->Array` of animation `js-->Object`. So, I tried fixing it, which took a few minutes, and created a pull request with tests.
 
 At this point, I was hoping that in the worst case, I'll get some kind of feedback on how impractical my solution was. After a week, my pull request was still in black hole. So, I simply closed it thinking maybe they don't care, and since my animations were defined in CSS by now. I moved on with life.
 
@@ -56,4 +56,4 @@ Next was the battle of `commonjs` vs `esm` and the build. It took a while to add
 
 ## Conclusion
 
-So, while I'm still using Tailwind, I no longer do it the tailwind way, but everything works smoothly now. Instead of doing `yarn add tailwindcss` I can do `yarn add mohitsinghs/tailwindcss#x` and on the top of that I can finally fix things without my pull request in black hole. Investing a day or two to save weeks of waiting on fixes is a better way to learn things we use.
+So, while I'm still using Tailwind, I no longer do it the tailwind way, but everything works smoothly now. Instead of doing `bash-->yarn add tailwindcss` I can do `bash-->yarn add mohitsinghs/tailwindcss#x` and on the top of that I can finally fix things without my pull request in black hole. Investing a day or two to save weeks of waiting on fixes is a better way to learn things we use.
