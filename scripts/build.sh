@@ -43,7 +43,7 @@ for file in out/**/*.html; do
     <loc>$loc</loc>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
-    <lastmod>$(date +%F-T%T.%3NZ)</lastmod>
+    <lastmod>$(date +%FT%T.%3NZ)</lastmod>
   </url>
 "
 done
