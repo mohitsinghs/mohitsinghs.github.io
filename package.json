@@ -8,8 +8,7 @@
   "homepage": "https://mohitsingh.in",
   "scripts": {
     "dev": "next",
-    "build": "next build",
-    "postbuild": "next export",
+    "build": "./scripts/build.sh",
     "start": "next start"
   },
   "dependencies": {
