@@ -32,13 +32,13 @@ sm='<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
 '
 # loop over all html file
-for file in out/**/*.html; do
+for file in $OUT_DIR/**/*.html $OUT_DIR/*.html; do
   # convert current file to urls
   current=$(echo $file | rev | cut -d '.' -f 2- | rev | cut -d '/' -f 2-)
   loc="https://$SITE_URL/$current"
   # treat index and 404 differently
-  [[ $file == "out/index.html" ]] && loc="https://$SITE_URL"
-  [[ $file == "out/404.html" ]] && continue
+  [[ $file == "$OUT_DIR/index.html" ]] && loc="https://$SITE_URL"
+  [[ $file == "$OUT_DIR/404.html" ]] && continue
   sm="$sm  <url>
     <loc>$loc</loc>
     <changefreq>daily</changefreq>
