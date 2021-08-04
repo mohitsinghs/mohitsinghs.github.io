@@ -1,5 +1,5 @@
-import Link from 'next/link'
 import Layout from '@/components/Layout'
+import Link from 'next/link'
 import { ChevronRight } from 'react-feather'
 
 export default function List({ title, posts }) {
@@ -7,6 +7,7 @@ export default function List({ title, posts }) {
     <Layout
       title={`${title} | Blog of Mohit Singh`}
       type='archive'
+      url={title.toLowerCase()}
       header={
         <header>
           <h1>{title}</h1>
