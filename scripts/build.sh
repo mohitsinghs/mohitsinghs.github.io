@@ -1,6 +1,6 @@
 #!/bin/env bash
 SITE_URL="mohitsingh.in"
-OUT_DIR="./out"
+OUT_DIR="out"
 
 # build site first
 next build
