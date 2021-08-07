@@ -9,9 +9,7 @@ In 2014, I decide to build static websites for others in need, voluntarily. I di
 
 ## From Jekyll to njk
 
-I decide to use Jekyll ^[A static site generator written in Ruby.] and built those websites with it. Jekyll has a templating/markup language named liquid. I got familiar with markdown, yaml and templating languages. It was working fine until one day, I decided to move to something else due to some limitations.
-
-required ruby along with ruby devkit which I really didn't like. I learned about gulp ^[A build tool written in javascript] and nunjucks, a templating language similar to liquid and decided to build old sites with these new tools. Node felt simple and easy to use.
+I decide to use Jekyll ^[A static site generator written in Ruby.] and built those websites with it. Jekyll has a templating/markup language named liquid. I got familiar with markdown, yaml and templating languages. It was working fine until one day, I decided to move to something else due to some limitations. Also, Jekyll required ruby along with ruby devkit which I really didn't like. I learned about gulp ^[A build tool written in javascript] and nunjucks, a templating language similar to liquid and decided to build old sites with these new tools. Node felt simple and easy to use.
 
 After putting together a few gulp plugins to replicate Jekyll like structure, I was able to move away from Jekyll, but not completely, The plugin I used render nunjucks needed 3 other plugins in order to support front-matter and external data. This didn't feel right to me. I forked original rendered and added markdown and front-matter support to it. It got some community adoption and I learned that same problem was with a lot of other plugin users. I was happy that I helped others.
 
