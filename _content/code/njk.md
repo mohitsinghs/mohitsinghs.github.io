@@ -2,7 +2,7 @@
 title: Story of njk, a tool mistreated
 author: Mohit Singh
 date: '2021-08-07'
-excerpt: In 2014, I decide to build static websites for others in need, voluntarily. I didn't know much about web technologies but after a little research (googling ?) I found that static-site-generators were a thing.
+excerpt: In 2014, I decide to build static websites for others in need, voluntarily. I didn't know much about web technologies but after a little research, I found that static-site-generators were a thing.
 ---
 
 In 2014, I decide to build static websites for others in need, voluntarily. I didn't know much about web technologies but after a little research (googling ?) I found that static-site-generators were a thing. I spent next few months teaching myself web stuff. Next, I was looking for a good static site generator to utilize this newly gained knowledge.
@@ -22,5 +22,7 @@ Soon after, I abstracted away my gulp-config as a module and named it njk. It wa
 Fast forwards to some years, I kept maintaining njk since I was building all my sites with it. It got some adoption but wasn't much popular. By now, I was good enough in React and with time, migrated those sites to Next. njk was in good shape and in maintainence mode at this point. A few months ago, during a random lookup, I landed in a project that used njk as dependency. I got curious how they used it. What I found next was shocking. They used njk just to have nunjucks as a dependency. My guess was that njk sounded official and some people downloaded it instead of nunjucks library. It worked since njk was depending on nunjucks.
 
 A facepalm later, I decide to dig deeper. After looking into some dependent projects, I found that most of them had njk but they intended to use nunjucks directly. It was okay that njk wasn't much used, but finding out that most of existing users were misusers was hilarious. They intended bananas but ended up with a gorilla with bananas and the whole circus around it ^[nunjucks is way lighter than njk since former is a library and later is a command line tool for specific job]
+
+## Conclusion
 
 We are installing dependencies so mindlessly nowadays that something like this can happen frequently and I witnessed it in my previous job. I have no idea how to solve this and I've already stopped using that tool but if njk were a person, I can imagine him complaining - "They are doing weird thing with me".
