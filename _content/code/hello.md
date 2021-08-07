@@ -9,4 +9,4 @@ I tried blogging a few times during last 8 years, but ended up stopping every ti
 
 ## Tech Stack
 
-This blog is built with Next, since that's what I use for most of the sites, along with some custom code to make Next work as blogging platform. Styles are from TailwindCSS which I love and hate at the same time. I'm also working on a lightweight CMS connected with GitHub. There is Netlify CMS and at some point, I tried it, but it misses a lot of features ( NLP powered suggestions for example ) that I'll be integrating.
+This blog is built with Next, since that's what I use for most of the sites, along with some custom code to make Next work as blogging platform. Styles are from TailwindCSS which I love and hate at the same time.
