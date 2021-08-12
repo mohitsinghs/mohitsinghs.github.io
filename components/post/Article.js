@@ -1,6 +1,7 @@
 import Layout from '@/components/Layout'
 import useLF from '@/hooks/useLF'
 import 'littlefoot/dist/littlefoot.css'
+import Comment from './Comment'
 
 export default function Article({ post }) {
   useLF()
@@ -36,6 +37,8 @@ export default function Article({ post }) {
         </header>
 
         <section dangerouslySetInnerHTML={{ __html: post.content }} />
+
+        <Comment />
       </article>
     </Layout>
   )
