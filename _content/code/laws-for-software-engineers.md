@@ -33,11 +33,11 @@ Software Engineering is not always fun and sometimes we face results we never ex
 
 ## 7. Hofstadter's law
 
-> It always takes longer than you expect, even when you take into account Hofstadter's Law
+> It always takes longer than you expect, even when you take into account Hofstadter's Law.
 
 ## 8. Kerckhoffs's principle
 
-> A cryptographic system should be secure even if everything about the system, except the key, is public knowledge
+> A cryptographic system should be secure even if everything about the system, except the key, is public knowledge.
 
 ## 9. Knuth's optimization principle
 
@@ -45,7 +45,7 @@ Software Engineering is not always fun and sometimes we face results we never ex
 
 ## 10. Linus's law
 
-> Given enough eyeballs, all bugs are shallow
+> Given enough eyeballs, all bugs are shallow.
 
 ## 11. Moore's Law
 
