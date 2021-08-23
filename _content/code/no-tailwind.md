@@ -57,3 +57,7 @@ Next was the battle of `commonjs` vs `esm` and the build. It took a while to add
 ## Conclusion
 
 So, while I'm still using Tailwind, I no longer do it the tailwind way, but everything works smoothly now. Instead of doing `bash-->yarn add tailwindcss` I can do `bash-->yarn add mohitsinghs/tailwindcss#x` and on the top of that I can finally fix things without my pull request in black hole. Investing a day or two to save weeks of waiting on fixes is a better way to learn things we use.
+
+## Updates
+
+So, one of the bugs got fixed in tailwindcss and I deleted my fork but learned a lot during process of mindlessly modifying tailwindcss sources. So, back to tailwind but still not satisfied with a lot of things.
