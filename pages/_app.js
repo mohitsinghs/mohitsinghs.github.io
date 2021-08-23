@@ -1,6 +1,6 @@
 import '@fontsource/poppins/latin.css'
-import '../styles/index.css'
 import Head from 'next/head'
+import '../styles/index.css'
 
 const App = ({ Component, pageProps }) => (
   <>

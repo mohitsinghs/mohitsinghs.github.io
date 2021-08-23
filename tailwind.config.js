@@ -1,6 +1,5 @@
 const defaultTheme = require('tailwindcss/defaultTheme')
 const colors = require('tailwindcss/colors')
-const typography = require('tailwindcss/typography')
 
 module.exports = {
   mode: 'jit',
@@ -13,8 +12,8 @@ module.exports = {
       },
       colors: {
         gray: colors.coolGray,
-        // one dark colors
         code: {
+          // one dark colors
           black: '#282c34',
           white: '#abb2bf',
           gray: '#7f848e',
@@ -32,13 +31,13 @@ module.exports = {
         DEFAULT: {
           css: {
             color: theme('colors.gray.600'),
-            '& h2': {
+            h2: {
               color: theme('colors.gray.700'),
             },
-            '& a': {
+            a: {
               color: theme('colors.gray.600'),
             },
-            '& code': {
+            code: {
               color: theme('colors.code.white'),
               backgroundColor: theme('colors.code.black'),
               padding: '0.125rem 0.5rem',
@@ -47,10 +46,10 @@ module.exports = {
               fontWeight: '400',
               display: 'inline-block',
             },
-            '& code::before': {
+            'code::before': {
               content: '""',
             },
-            '& code::after': {
+            'code::after': {
               content: '""',
             },
           },
@@ -58,5 +57,5 @@ module.exports = {
       }),
     },
   },
-  plugins: [typography],
+  plugins: [require('@tailwindcss/typography')],
 }

@@ -6,13 +6,15 @@ export default function Layout({
   title = 'Mohit Singh',
   description = 'Mohit Singh is a Software Engineer, Open Sourcerer, Physics Enthusiast and Fitness Freak',
   url = '',
-  type,
+  home = false,
   header,
 }) {
   return (
     <>
       {header && header}
-      <main className={clsx([type && type])}>
+      <main
+        className={clsx([!home && 'flex flex-col', 'flex-grow flex-shrink-0'])}
+      >
         <Head>
           <title>{title}</title>
           <meta name='description' content={description} />
@@ -30,8 +32,10 @@ export default function Layout({
         </Head>
         {children}
       </main>
-      <footer>
-        <p>Copyright &copy; 2021 Mohit Singh</p>
+      <footer className='w-full py-4 text-center'>
+        <p className='text-xs text-gray-700'>
+          Copyright &copy; 2021 Mohit Singh
+        </p>
       </footer>
     </>
   )

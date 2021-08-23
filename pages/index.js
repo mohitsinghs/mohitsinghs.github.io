@@ -1,22 +1,11 @@
-import Layout from '@/components/Layout'
+import Header from '@/components/home/Header'
 import Section from '@/components/home/Section'
+import Layout from '@/components/Layout'
 import { postsForHome } from 'lib/page'
-import useTyped from '@/hooks/useTyped'
 
 export default function IndexPage({ posts }) {
-  const el = useTyped()
   return (
-    <Layout
-      type='home'
-      header={
-        <header>
-          <h1>Mohit Singh</h1>
-          <p>
-            <span ref={el}>A Human and Dreamer</span>
-          </p>
-        </header>
-      }
-    >
+    <Layout home header={<Header />}>
       {Object.keys(posts).map((postType) => (
         <Section name={postType} key={postType}>
           {posts[postType]?.map((post) => (
