@@ -1,7 +1,6 @@
 import Layout from '@/components/Layout'
 import useLF from '@/hooks/useLF'
 import 'littlefoot/dist/littlefoot.css'
-import Comments from './Comments'
 
 export default function Article({ post }) {
   useLF()
@@ -50,7 +49,6 @@ export default function Article({ post }) {
           className='mx-auto prose'
           dangerouslySetInnerHTML={{ __html: post.content }}
         />
-        <Comments />
       </article>
     </Layout>
   )
