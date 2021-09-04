@@ -41,13 +41,13 @@ Now that my link creation speed was way higher than retrieval, I wanted to optim
 
 ## Adding analytics
 
-Since the real benefit of link shortener for businesses was to extract data and analyze traffic from these links. I decided to implement that too. I was already getting IP and User-Agent. All I needed was a user-agent parser and an IP info parser. I found [a good parser][ua] for user agents and used [GeoLite2][geolite2] from MaxMind to parse IP info. Since every click had info, I decided to implement a worker pool ^[Will write on this in next post] and sent data there for paring and batch ingestion to avoid request slowdowns.
+Since the real benefit of link shortener for businesses was to extract data and analyze traffic from these links. I decided to implement that too. I was already getting IP and User-Agent. All I needed was a user-agent parser and an IP info parser. I found [a good parser][ua] for user agents and used [GeoLite2][geolite2] from MaxMind to parse IP info. Since every click had info, I decided to implement a worker pool and sent data there for paring and batch ingestion to avoid request slowdowns.
 
 As I've interacted with almost every popular TimeSeries Database, I picked [Timescale][ts] since it was already PostgreSQL based and was fast enough. ^[I admit there were better choices and [Druid][druid] is my favorite, but this was a self-contained system and not a cluster-mess [Druid][druid] is and because I wanted to use [Timescale][ts]]. The workers ingested events fine, and I had a good amount of data-points for every single click.
 
 ## Going crazy
 
-At some point, I thought about generating all 600M+ IDs, randomizing them and using that to create links. No collisions at all. That could be stored in a few GB. I had some other crazy ideas, but I avoided them.
+At some point, I thought about generating all IDs beforehand, randomizing them and using that to create links. No collisions at all. That could be stored in a few GB. I had some other crazy ideas, but I avoided them for now.
 
 ## Conclusion
 
